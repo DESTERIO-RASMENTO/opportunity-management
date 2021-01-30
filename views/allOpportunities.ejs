@@ -1,0 +1,10 @@
+<%- include('includes/header') %>
+<div class="container py-md-5 container--narrow">
+    <% account.forEach(function(account){ %>
+    <a href="/create/<%= account._id %>" class="list-group-item list-group-item-action">
+        <img class="avatar-tiny" src="<%= account.author.avatar %>">
+        <strong><%= account.title %></strong> Account
+    </a>
+    <% }) %>
+</div>
+<%- include('includes/footer') %>

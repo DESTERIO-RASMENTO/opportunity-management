@@ -1,0 +1,35 @@
+<%- include('includes/header') %>
+
+
+    <div class="container py-md-5 container--narrow">
+        
+
+        
+            <% oppo.forEach((e)=>{ %>
+            <h2>Posted by <a href="#"> <%= %> </a> on <%= e.date%>
+                
+        
+        <div class="body-content">
+           <p> Job title: <%= e.title %>
+            <br> 
+            Level: <%= e.level %>
+            <br>
+            Amount: <%= e.amount %></p>
+            <p></p>
+            <h3>Description</h3>
+            <p><%= e.description %></p>
+        </div>
+        
+    <% }) %>
+    
+        
+
+    </div>
+
+
+
+
+
+
+
+<%- include('includes/footer') %>

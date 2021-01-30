@@ -1,0 +1,28 @@
+<%- include('includes/header') %>
+
+    <div class="container py-md-5 container--narrow">
+        <div class="d-flex justify-content-between">
+            <h2><a href="#"> <%= account.title %></a></h2>
+            <% if(account.isVisitorOwner){ %>
+                <span class="pt-2">
+                    <a href="/create/<%= account._id %>/create-opportunities" class="text-primary mr-2" data-toggle="tooltip" data-placement="top" title="Create Opportunies"><i
+                            class="fas fa-edit"></i></a>
+                    
+                </span>
+           <% }%>
+        </div>
+
+        
+
+        <div class="body-content">
+           <%= account.body %>
+        </div>
+        <div class="text-muted small mb-4">
+            <p> <a href="/profile/<%=account.author.username %>"><img class="avatar-tiny"
+                    src="<%= account.author.avatar %>"></a>
+            Created by <%= account.author.username%></p> 
+    </div>
+
+    </div>
+
+    <%- include('includes/footer') %>

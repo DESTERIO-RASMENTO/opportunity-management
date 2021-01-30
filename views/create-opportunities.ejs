@@ -1,0 +1,42 @@
+    <%- include('includes/header') %>
+
+    <!-- header ends here -->
+
+    <div class="container py-md-5 container--narrow">
+        <div class="card">
+            <div class="card-body">
+                <!---here hdhdhdhddhdhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
+                <form action="/create-opportunity" method="POST">
+                    <div class="form-group">
+                        <label for="post-title" class="text-muted mb-1"><small>Title</small></label>
+                        <input required name="title" id="post-title"
+                            class="form-control form-control-lg form-control-title" type="text" placeholder=""
+                            autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="post-amount" class="text-muted mb-1"><small>Amount</small></label>
+                        <input required name="amount" id="post-amount"
+                            class="form-control form-control-lg form-control-title" type="text" placeholder=""
+                            autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="post-level" class="text-muted mb-1"><small>Level</small></label>
+                        <input required name="level" id="post-level"
+                            class="form-control form-control-lg form-control-title" type="text" placeholder=""
+                            autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-description" class="text-muted mb-1"><small>Description</small></label>
+                        <textarea required name="description" id="post-description" class="body-content short-textarea form-control"
+                            type="text"></textarea>
+                    </div>
+
+                    <button class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <%- include('includes/footer') %>
